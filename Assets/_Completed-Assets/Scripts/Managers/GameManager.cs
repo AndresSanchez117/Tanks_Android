@@ -22,6 +22,8 @@ namespace Complete
         private TankManager m_RoundWinner;          // Reference to the winner of the current round.  Used to make an announcement of who won.
         private TankManager m_GameWinner;           // Reference to the winner of the game.  Used to make an announcement of who won.
 
+        //private TouchScreenKeyboard keyboard;
+
 
         private void Start()
         {
@@ -100,6 +102,9 @@ namespace Complete
             // As soon as the round starts reset the tanks and make sure they can't move.
             ResetAllTanks ();
             DisableTankControl ();
+
+            //TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false);
+            //TouchScreenKeyboard.hideInput = true;
 
             // Snap the camera's zoom and position to something appropriate for the reset tanks.
             m_CameraControl.SetStartPositionAndSize ();
